@@ -1,6 +1,6 @@
 /*
-RiTa.js reference:
-https://rednoise.org/rita/reference/index.php
+https://rednoise.org/rita/index.html#download
+https://rednoise.org/rita/reference
 */
 
 const myInput = document.querySelector('#myInput')
