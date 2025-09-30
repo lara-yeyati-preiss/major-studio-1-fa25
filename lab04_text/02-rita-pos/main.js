@@ -28,6 +28,7 @@ function processRita(input) {
   words.forEach((word, i) => {
     // use regular expression to replace all nouns with random words pulled from RiTa
     // reference https://regexr.com/
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
     if (/nn/.test(pos[i])) {
       // if the word is a noun replace the word with a new noun:
       output += RiTa.randomWord(pos[i]) + ' ';
