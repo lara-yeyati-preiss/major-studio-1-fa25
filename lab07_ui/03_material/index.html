@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Material Design Components</title>
     
-    <!-- Material Components Web CSS (Material Design 2) -->
+    <!-- UI Library CSS -->
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
     
-    <!-- Material Icons from Google Fonts -->
+    <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
     <style>
@@ -24,6 +24,12 @@
             padding: 20px;
             border: 1px solid #e0e0e0;
             border-radius: 8px;
+        }
+
+        .grid-demo {
+            background: #f5f5f5;
+            padding: 16px;
+            text-align: center;
         }
     </style>
 </head>
@@ -52,7 +58,7 @@
         <h2>Card</h2>
         <div class="mdc-card" style="max-width: 400px; padding: 20px;">
             <h3>Card Title</h3>
-            <p>This is a Material Design 2 card component. Switch themes to see the color scheme change.</p>
+            <p>This is a card component. Switch themes to see the color scheme change.</p>
             <button class="mdc-button">
                 <span class="mdc-button__ripple"></span>
                 <span class="mdc-button__label">Action</span>
@@ -142,7 +148,7 @@
 
     <!-- Icons -->
     <div class="component-section">
-        <h2>Material Icons</h2>
+        <h2>Icons</h2>
         <div style="display: flex; gap: 20px; flex-wrap: wrap; font-size: 32px;">
             <span class="material-icons">home</span>
             <span class="material-icons">search</span>
@@ -171,11 +177,32 @@
         </div>
     </div>
 
-    <!-- Material Components Web JavaScript -->
+    <!-- Responsive Layout -->
+    <div class="component-section">
+        <h2>Responsive Layout Grid</h2>
+        <p>Resize window to see columns adapt (12-col system): 3/6/3 → 8/8/4 → 4/4/4</p>
+        <p><a href="https://github.com/material-components/material-components-web/tree/master/packages/mdc-layout-grid" target="_blank">Layout Grid Documentation</a></p>
+        
+        <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-3-desktop">
+                    <div class="grid-demo">Column A</div>
+                </div>
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop">
+                    <div class="grid-demo">Column B</div>
+                </div>
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-3-desktop">
+                    <div class="grid-demo">Column C</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- UI Library JavaScript -->
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     
     <script>
-        // Initialize Material Components
+        // Initialize components
         mdc.autoInit();
     </script>
 </body>
